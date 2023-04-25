@@ -3,7 +3,7 @@ import { LockIcon, TweetMoreIcon } from "../icons/Icons";
 
 const UserBox = () => {
   return (
-    <div className="flex justify-between items-center mb-6 hover:bg-primary-light cursor-pointer rounded-full py-2 px-4 transform transition-colors duration-200">
+    <div className="flex justify-between items-center mb-6 hover:bg-gray-200 cursor-pointer rounded-full py-2 px-4 transform transition-colors duration-200">
       <div className="flex space-x-3">
         <div>
            <img
@@ -14,7 +14,9 @@ const UserBox = () => {
         </div>
         
         <div className="flex flex-col">
-          <span className="font-bold text-md text-black ">Yusuf Aydos <span><LockIcon/></span></span>
+          <span className="font-bold text-md text-black">Yusuf Aydos
+          {/* <span><LockIcon/></span> */}
+          </span>
           <span className="text-sm text-gray-dark">@YusufAydos</span>
         </div>
       </div>

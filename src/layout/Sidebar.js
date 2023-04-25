@@ -71,33 +71,36 @@ const sideLinks = [
 ];
 
 const Sidebar = () => {
-  const [active, setActive] = useState("Home")
+  const [active, setActive] = useState("Home");
   const handleMenuItemClick = (name) => {
-    setActive(name)
-  }
+    setActive(name);
+  };
   return (
     <div className="h-screen sticky top-0 flex flex-col justify-between w-72 px-2">
       <div>
-        <div className="mt-1 mb-4 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-lightest transform transition-colors duration-200">
-          <img src={twitterLogo} alt="Twitter Logo" className="w-9 h-9" />
+        <div className="mt-1 mb-1 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-lightest transform transition-colors duration-200">
+          <img src={twitterLogo} alt="Twitter Logo" className="w-8 h-8" />
         </div>
         <nav className="mb-2">
           <ul>
-            {sideLinks.map(({name,icon}) => (
-              <SideLink key={name} name={name} Icon={icon} active={active} onMenuItemClick={handleMenuItemClick}/>
-            )
-
-            )}
+            {sideLinks.map(({ name, icon }) => (
+              <SideLink
+                key={name}
+                name={name}
+                Icon={icon}
+                active={active}
+                onMenuItemClick={handleMenuItemClick}
+              />
+            ))}
           </ul>
         </nav>
         <div>
           <button className="bg-primary-base hover:bg-primary-dark text-white shadow-lg rounded-full py-3 px-8 w-10/12 transform transition-colors duration-200">
-          Tweet
-        </button>
+            Tweet
+          </button>
         </div>
-        
       </div>
-      <UserBox/>
+      <UserBox />
       {/* <HomeIcon />
       <ExploreIcon />
       <NotificationsIcon />
@@ -127,7 +130,6 @@ const Sidebar = () => {
       
 
       <SearchIcon /> */}
-
     </div>
   );
 };
