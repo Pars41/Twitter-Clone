@@ -76,7 +76,7 @@ const Sidebar = () => {
     setActive(name);
   };
   return (
-    <div className="h-screen sticky top-0 flex flex-col justify-between w-72 px-2">
+    <div className="h-screen sticky top-0 flex flex-col justify-between w-72 px-3">
       <div>
         <div className="mt-1 mb-1 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-lightest transform transition-colors duration-200">
           <img src={twitterLogo} alt="Twitter Logo" className="w-8 h-8" />
@@ -101,35 +101,6 @@ const Sidebar = () => {
         </div>
       </div>
       <UserBox />
-      {/* <HomeIcon />
-      <ExploreIcon />
-      <NotificationsIcon />
-      <MessagesIcon />
-      <BookmarksIcon />
-      <ListsIcon />
-      <ProfileIcon />
-      <MoreIcon /> */}
-
-      {/* <DirectionIcon />
-      <EarthIcon />
-      <ImageIcon />
-      <GIFIcon />
-      <PollIcon />
-      <EmojiIcon />
-      <ScheduleIcon />
-      <LocationIcon />
-
-      <VerifiedIcon />
-      <TweetMoreIcon />
-      <ReplyIcon />
-      <RetweetIcon />
-      <LikeIcon />
-      <ViewIcon />
-      <ShareIcon />
-
-      
-
-      <SearchIcon /> */}
     </div>
   );
 };
