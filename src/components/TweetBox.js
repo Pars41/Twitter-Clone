@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { EmojiIcon, GIFIcon, ImageIcon, PollIcon, ScheduleIcon } from "../icons/Icons";
+import { EmojiIcon, GIFIcon, ImageIcon, LocationIcon, PollIcon, ScheduleIcon } from "../icons/Icons";
 import db from "../Firebase"
 import { addDoc, collection } from "firebase/firestore";
 const TweetBox = () => {
@@ -41,6 +41,9 @@ const TweetBox = () => {
             </div>
             <div className="flex items-center justify-center w-11 h-11 rounded-full hover:bg-gray-lightest">
                 <ScheduleIcon className="w-6 h-6 text-primary-base" />
+            </div>
+            <div className="flex items-center justify-center w-11 h-11 rounded-full hover:bg-gray-lightest">
+                <LocationIcon className="w-6 h-6 text-primary-base" />
             </div>
             
         </div>

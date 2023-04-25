@@ -25,6 +25,7 @@ import {
   ViewIcon,
   ShareIcon,
   SearchIcon,
+  VerificationIcon,
 } from "../icons/Icons";
 import SideLink from "../components/SideLink";
 import UserBox from "../components/UserBox";
@@ -52,8 +53,12 @@ const sideLinks = [
     icon: BookmarksIcon,
   },
   {
-    name: "Lists",
+    name: "Twitter Blue",
     icon: ListsIcon,
+  },
+  {
+    name: "Verified Organiza...",
+    icon: VerificationIcon,
   },
   {
     name: "Profile",
@@ -119,6 +124,7 @@ const Sidebar = () => {
       
 
       <SearchIcon /> */}
+
     </div>
   );
 };
