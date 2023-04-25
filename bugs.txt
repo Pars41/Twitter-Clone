@@ -1,0 +1,2 @@
+firebase path bug
+icons className bug (cant add styling to component)
