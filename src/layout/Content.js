@@ -43,10 +43,10 @@ const Content = () => {
         </div>
         <div className=" flex justify-evenly  ">
           <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 ">
-            <p className="p-3">For You</p>
+            <p className="p-3 font-medium text-gray-500">For You</p>
           </div>
           <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250">
-            <p className="p-3">Following</p>
+            <p className="p-3 font-medium text-gray-500">Following</p>
           </div>
         </div>
       </header>

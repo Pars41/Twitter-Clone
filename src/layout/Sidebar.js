@@ -79,7 +79,7 @@ const Sidebar = () => {
     <div className="h-screen sticky top-0 flex flex-col justify-between w-72 px-3">
       <div>
         <div className="mt-1 mb-1 ml-1 flex items-center justify-center w-12 h-12 rounded-full hover:bg-gray-200 transform transition-colors duration-300">
-          <img src={twitterLogo} alt="Twitter Logo" className="w-8 h-8" />
+          <img src={twitterLogo} alt="Twitter Logo" className="w-7 h-7" />
         </div>
         <nav className="mb-2">
           <ul>
