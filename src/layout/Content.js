@@ -37,20 +37,20 @@ const Content = () => {
 
   return (
     <main className="flex-1 flex flex-col border-r border-l border-gray-extraLight ">
-      <header className="sticky top-0 z-10 bg-white">
-      <div className=" flex justify-between items-center p-4 border-b border-gray-extraLight ">
-        <span className="font-bold text-xl text-gray-900">Home</span>
-      </div>
-      <div className=" flex justify-evenly ">
-        <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250">
-          <p className="p-3">For You</p>
+      <header className="sticky top-0 z-10 bg-white opacity-95">
+        <div className=" flex justify-between items-center p-4 border-b border-gray-extraLight border-none">
+          <span className="font-bold text-xl text-gray-900">Home</span>
         </div>
-        <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250">
-          <p className="p-3">Following</p>
+        <div className=" flex justify-evenly  ">
+          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 ">
+            <p className="p-3">For You</p>
+          </div>
+          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250">
+            <p className="p-3">Following</p>
+          </div>
         </div>
-      </div>
       </header>
-      
+
       <div className="flex px-4 space-x-4 py-3">
         <img
           src="https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E"
