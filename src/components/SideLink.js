@@ -10,11 +10,11 @@ const SideLink = ({ name, Icon, onMenuItemClick, active }) => {
       >
         <div className="inline-block">
           <div
-            className={`flex items-center group-hover:bg-gray-200  rounded-full pl-3 pr-8 py-3
+            className={`flex items-center group-hover:bg-gray-200  rounded-full pl-3 pr-8 py-3 transform transition-colors duration-300
         ${isActive ? "font-bold" : ""}`}
           >
             <span>
-              <Icon className={`${isActive ? "bg-black" : ""}`} />
+              <Icon className={`${isActive ? "bg-black" : ""}`} /> 
             </span>
             <span className="ml-4 ">{name}</span>
           </div>
