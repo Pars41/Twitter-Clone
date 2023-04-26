@@ -47,7 +47,7 @@ const TweetBox = () => {
             </div>
             
         </div>
-        <button className="bg-primary-base text-white rounded-full px-4 py-2 font-medium" onClick={sendTweet}>Tweet</button>
+        <button className={`bg-primary-base text-white rounded-full px-4 py-2 font-medium ${(content !== "")? "opacity-100" : "opacity-50"}`} onClick={sendTweet}>Tweet</button>
       </div>
     </div>
   );
