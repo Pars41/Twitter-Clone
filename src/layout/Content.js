@@ -3,46 +3,32 @@ import Divider from "../components/Divider";
 import TweetBox from "../components/TweetBox";
 import { ProfileIcon } from "../icons/Icons";
 import { collection, getDocs } from "firebase/firestore";
-import db from "../Firebase";
+import {db} from "../Firebase";
 import FeedList from "../components/FeedList";
 
 const Content = () => {
   const [tweets, setTweets] = useState([]);
   const [feed, setFeed] = useState("you")
 
-  async function getCities(db) {
-    const citiesCol = collection(db, "users");
+  const getCities = async (db) => {
+    try {
+      const citiesCol = collection(db, "users");
     const citySnapshot = await getDocs(citiesCol);
     const cityList = citySnapshot.docs.map((doc) => doc.data());
     return cityList;
+
+    } catch (error) {
+      console.log(error);
+    }
+    
   }
   
-  console.log(getCities(db));
  
   useEffect(() => {
-    setTweets([
-      {
-        avatar:
-          "https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E",
-        content: "Is other field seen in firebase?",
-        displayName: "Yusuf Aydos",
-        image:
-          " https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
-        timestamp: 1682342555755,
-        userName: "@YsfAyds",
-      },
-      {
-        avatar: "https://www.w3schools.com/howto/img_avatar.png ",
-        content: "Is other field seen in firebase?",
-        displayName: "Yusuf Aydos",
-        image:
-          " https://imglarger.com/Images/before-after/ai-image-enlarger-1-after-2.jpg",
-        timestamp: 1682342555755,
-        userName: "@deneme",
-      },
-    ]);
-    // getDocs(collection(db, "users")).orderBy("timestamp", "desc")
-    // db.collection("users").orderBy("timestamp", "desc").onSnapshot(snapshot => setTweets(snapshot.docs.map(doc => doc.data())))
+    setTweets(
+    
+
+    );
   }, []);
 
   return (
@@ -77,3 +63,25 @@ const Content = () => {
 };
 
 export default Content;
+
+//   [
+    //   {
+    //     avatar:
+    //       "https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E",
+    //     content: "Is other field seen in firebase?",
+    //     displayName: "Yusuf Aydos",
+    //     image:
+    //       " https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
+    //     timestamp: 1682342555755,
+    //     userName: "@YsfAyds",
+    //   },
+    //   {
+    //     avatar: "https://www.w3schools.com/howto/img_avatar.png ",
+    //     content: "Is other field seen in firebase?",
+    //     displayName: "Yusuf Aydos",
+    //     image:
+    //       " https://imglarger.com/Images/before-after/ai-image-enlarger-1-after-2.jpg",
+    //     timestamp: 1682342555755,
+    //     userName: "@deneme",
+    //   },
+    // ]

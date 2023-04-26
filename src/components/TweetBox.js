@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { EmojiIcon, GIFIcon, ImageIcon, LocationIcon, PollIcon, ScheduleIcon } from "../icons/Icons";
-import db from "../Firebase"
+import {db} from "../Firebase"
 import { addDoc, collection } from "firebase/firestore";
 const TweetBox = () => {
   const [content, setContent] = useState("")

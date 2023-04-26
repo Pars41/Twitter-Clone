@@ -2,7 +2,7 @@ import React from "react";
 
 const Svg = ({ children, className }) => {
   return (
-    <svg viewbox="0 0 24 24 " className={`fill-current ${className}`}>
+    <svg viewBox="0 0 24 24 " className={`fill-current ${className}`}>
       {children}
     </svg>
   );
