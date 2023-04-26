@@ -2,9 +2,9 @@ import FeedItem from "./FeedItem";
 const FeedList = ({ tweets }) => {
   return (
     <div>
-      {/* {tweets.map((tweet, index) => (
+      {tweets.map((tweet, index) => (
         <FeedItem {...tweet} key={index} />
-      ))} */}
+      ))}
     </div>
   );
 };

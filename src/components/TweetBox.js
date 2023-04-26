@@ -7,20 +7,27 @@ const TweetBox = () => {
   
   
   const sendTweet = () => {
-    if(content !== ""){
-      addDoc(collection(db, "users"), {
-        displayName: "Yusuf Aydos",
-        userName: "@YsfAyds",
-        content,
-        timestamp: new Date().getTime(),
-        image : " https://imglarger.com/Images/before-after/ai-image-enlarger-1-after-2.jpg",
-        avatar: "https://www.w3schools.com/howto/img_avatar.png "
-        
-
-      });
-
-      setContent("")
+    try {
+      if(content !== ""){
+        addDoc(collection(db, "users"), {
+          displayName: "Yusuf Aydos",
+          userName: "@YsfAyds",
+          content,
+          timestamp: new Date().getTime(),
+          image : " https://imglarger.com/Images/before-after/ai-image-enlarger-1-after-2.jpg",
+          avatar: "https://www.w3schools.com/howto/img_avatar.png "
+          
+  
+        });
+  
+        setContent("")
+      }
+    } catch (e) {
+      console.error("Error adding document: ", e);
     }
+
+
+    
   }
   return (
     <div className="flex flex-col flex-1 mt-2 px-2" >
