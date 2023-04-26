@@ -8,7 +8,17 @@ import FeedList from "../components/FeedList";
 
 const Content = () => {
   const [tweets, setTweets] = useState([]);
+  const [feed, setFeed] = useState("you")
 
+  async function getCities(db) {
+    const citiesCol = collection(db, "users");
+    const citySnapshot = await getDocs(citiesCol);
+    const cityList = citySnapshot.docs.map((doc) => doc.data());
+    return cityList;
+  }
+  
+  console.log(getCities(db));
+ 
   useEffect(() => {
     setTweets([
       {
@@ -39,14 +49,14 @@ const Content = () => {
     <main className="flex-1 flex flex-col border-r border-l border-gray-extraLight ">
       <header className="sticky top-0 z-10 bg-white opacity-95">
         <div className=" flex justify-between items-center p-4 border-b border-gray-extraLight border-none">
-          <span className="font-bold text-xl text-gray-900">Home</span>
+          <span className="font-bold text-xl text-gray-900 ">Home</span>
         </div>
-        <div className=" flex justify-evenly  ">
-          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 ">
-            <p className="p-3 font-medium text-gray-500">For You</p>
+        <div className=" flex justify-evenly  " >
+          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 " onClick={()=> setFeed("you")}>
+            <p className={`py-3 font-medium text-gray-500  ${feed === "you" ? "border-b-4 border-primary-base text-gray-900" : ""}`}>For You</p>
           </div>
-          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250">
-            <p className="p-3 font-medium text-gray-500">Following</p>
+          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250" onClick={()=> setFeed("following")}>
+            <p className={`py-3 font-medium text-gray-500  ${feed === "following" ? "border-b-4 border-primary-base text-gray-900" : ""}`}>Following</p>
           </div>
         </div>
       </header>

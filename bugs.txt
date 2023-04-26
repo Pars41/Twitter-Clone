@@ -1,2 +1,3 @@
 firebase path bug
-icons className bug (cant add styling to component)
+icons className bug (cant add styling to component)   OK  FIXED 
+Unable to resize icons
