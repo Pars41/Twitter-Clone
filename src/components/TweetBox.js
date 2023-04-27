@@ -1,31 +1,28 @@
 import { useState } from "react";
 import { EmojiIcon, GIFIcon, ImageIcon, LocationIcon, PollIcon, ScheduleIcon } from "../icons/Icons";
-import {db} from "../Firebase"
-import { addDoc, collection } from "firebase/firestore";
+import db from "../Firebase"
+import firebase from "firebase"
 const TweetBox = () => {
   const [content, setContent] = useState("")
   
   
   const sendTweet = () => {
-    try {
+    
       if(content !== ""){
-        addDoc(collection(db, "users"), {
+        db.collection("feed").add({
           displayName: "Yusuf Aydos",
-          userName: "@YsfAyds",
+          userName: "@YsfAyds",     
           content,
-          timestamp: new Date().getTime(),
-          image : " https://imglarger.com/Images/before-after/ai-image-enlarger-1-after-2.jpg",
+          timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+          image : " https://cdn.pixabay.com/photo/2020/07/08/12/13/monkey-sitting-nature-5383633_960_720.jpg",
           avatar: "https://www.w3schools.com/howto/img_avatar.png "
           
   
         });
   
-        setContent("")
+        setContent("");
       }
-    } catch (e) {
-      console.error("Error adding document: ", e);
-    }
-
+    
 
     
   }

@@ -16,7 +16,7 @@ const FeedItem = ({
           <h4 className="font-bold text-gray-800">{displayName}</h4>
           <span className="text-gray-600">{userName}</span>
           <div className="mx-2 bg-gray-400 h-1 w-1 border rounded-full" />
-          <span className="text-gray-600">{timestamp}</span>
+          <span className="text-gray-600">{timestamp?.toDate().toLocaleTimeString("tr-TR")}</span>
         </div>
         <p className="mt-2 text-gray-900 text-sm">{content}</p>
         {image && (

@@ -1,42 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Divider from "../components/Divider";
 import TweetBox from "../components/TweetBox";
-import { ProfileIcon } from "../icons/Icons";
-import { collection, getDocs } from "firebase/firestore";
-import {db} from "../Firebase";
 import FeedList from "../components/FeedList";
+import db from "../Firebase";
 
 const Content = () => {
   const [tweets, setTweets] = useState([]);
-  const [feed, setFeed] = useState("you")
+  const [feed, setFeed] = useState("you");
 
-  
- 
   useEffect(() => {
-    setTweets(
-      [
-        {
-          avatar:
-            "https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E",
-          content: "Is other field seen in firebase?",
-          displayName: "Yusuf Aydos",
-          image:
-            " https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg",
-          timestamp: 1682342555755,
-          userName: "@YsfAyds",
-        },
-        {
-          avatar: "https://www.w3schools.com/howto/img_avatar.png ",
-          content: "Is other field seen in firebase?",
-          displayName: "Yusuf Aydos",
-          image:
-            " https://imglarger.com/Images/before-after/ai-image-enlarger-1-after-2.jpg",
-          timestamp: 1682342555755,
-          userName: "@deneme",
-        }
-      ]
-
-    );
+    db.collection("feed")
+      .orderBy("timestamp", "desc")
+      .onSnapshot((snapshot) =>
+        setTweets(snapshot.docs.map((doc) => doc.data()))
+      );
   }, []);
 
   return (
@@ -45,12 +22,34 @@ const Content = () => {
         <div className=" flex justify-between items-center p-4 border-b border-gray-extraLight border-none">
           <span className="font-bold text-xl text-gray-900 ">Home</span>
         </div>
-        <div className=" flex justify-evenly  " >
-          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 " onClick={()=> setFeed("you")}>
-            <p className={`py-3 font-medium text-gray-500  ${feed === "you" ? "border-b-4 border-primary-base text-gray-900" : ""}`}>For You</p>
+        <div className=" flex justify-evenly  ">
+          <div
+            className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 "
+            onClick={() => setFeed("you")}
+          >
+            <p
+              className={`py-3 font-medium text-gray-500  ${
+                feed === "you"
+                  ? "border-b-4 border-primary-base text-gray-900"
+                  : ""
+              }`}
+            >
+              For You
+            </p>
           </div>
-          <div className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250" onClick={()=> setFeed("following")}>
-            <p className={`py-3 font-medium text-gray-500  ${feed === "following" ? "border-b-4 border-primary-base text-gray-900" : ""}`}>Following</p>
+          <div
+            className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250"
+            onClick={() => setFeed("following")}
+          >
+            <p
+              className={`py-3 font-medium text-gray-500  ${
+                feed === "following"
+                  ? "border-b-4 border-primary-base text-gray-900"
+                  : ""
+              }`}
+            >
+              Following
+            </p>
           </div>
         </div>
       </header>
@@ -71,4 +70,3 @@ const Content = () => {
 };
 
 export default Content;
-
