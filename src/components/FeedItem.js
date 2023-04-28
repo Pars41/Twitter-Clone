@@ -1,4 +1,4 @@
-import { LikeIcon, ReplyIcon, RetweetIcon, ShareIcon, ViewIcon } from "../icons/Icons";
+import { LikeIcon, ListsIcon, ReplyIcon, RetweetIcon, ShareIcon, ViewIcon } from "../icons/Icons";
 
 const FeedItem = ({
   avatar,

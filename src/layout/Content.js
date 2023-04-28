@@ -9,11 +9,12 @@ const Content = () => {
   const [feed, setFeed] = useState("you");
 
   useEffect(() => {
-    db.collection("feed")
+    db.collection("cemyilmaz")
       .orderBy("timestamp", "desc")
       .onSnapshot((snapshot) =>
         setTweets(snapshot.docs.map((doc) => doc.data()))
       );
+    
   }, []);
 
   return (
