@@ -14,16 +14,16 @@ const UserBox = () => {
         </div>
         
         <div className="flex flex-col w-2/3">
-          <span className="flex font-bold text-md text-black">
-           <p>Yusuf Aydos</p> <span className="pr-1"><LockIcon/></span>
+          <span className="flex font-bold items-center text-md text-black">
+           <p>Yusuf Aydos</p> <span className="pr-1"><LockIcon className={"w-4 h-4"}/></span>
           
           </span>
-          <span className="text-sm text-gray-dark">@YusufAydos</span>
+          <span className="text-sm text-gray-600 ">@YsfAyds</span>
         </div>
       </div>
 
-      <div className="w-2/12">
-        <TweetMoreIcon />
+      <div className="w-2/12 flex justify-end">
+        <TweetMoreIcon className={"w-5 h-5"} />
       </div>
     </div>
   );

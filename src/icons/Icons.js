@@ -1,5 +1,4 @@
 import React from "react";
-
 const Svg = ({ children, className }) => {
   return (
     <svg viewBox="0 0 24 24 " className={`fill-current ${className}`}>
@@ -166,9 +165,9 @@ export const VerifiedIcon = () => {
     </Svg>
   );
 };
-export const TweetMoreIcon = () => {
+export const TweetMoreIcon = ({className}) => {
   return (
-    <Svg className="w-7 h-7">
+    <Svg className={className}>
       <g>
         <path d="M3 12c0-1.1.9-2 2-2s2 .9 2 2-.9 2-2 2-2-.9-2-2zm9 2c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2zm7 0c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2z"></path>
       </g>
@@ -220,18 +219,18 @@ export const ShareIcon = ({className}) => {
     </Svg>
   );
 };
-export const SearchIcon = () => {
+export const SearchIcon = ({className}) => {
   return (
-    <Svg className="w-7 h-7">
+    <Svg className={className}>
       <g>
         <path d="M10.25 3.75c-3.59 0-6.5 2.91-6.5 6.5s2.91 6.5 6.5 6.5c1.795 0 3.419-.726 4.596-1.904 1.178-1.177 1.904-2.801 1.904-4.596 0-3.59-2.91-6.5-6.5-6.5zm-8.5 6.5c0-4.694 3.806-8.5 8.5-8.5s8.5 3.806 8.5 8.5c0 1.986-.682 3.815-1.824 5.262l4.781 4.781-1.414 1.414-4.781-4.781c-1.447 1.142-3.276 1.824-5.262 1.824-4.694 0-8.5-3.806-8.5-8.5z"></path>
       </g>
     </Svg>
   );
 };
-export const LockIcon = () => {
+export const LockIcon = ({className}) => {
   return (
-    <Svg className="w-5 h-5 p-0 m-0">
+    <Svg className={className}>
       <g><path d="M17.5 7H17v-.25c0-2.76-2.24-5-5-5s-5 2.24-5 5V7h-.5C5.12 7 4 8.12 4 9.5v9C4 19.88 5.12 21 6.5 21h11c1.39 0 2.5-1.12 2.5-2.5v-9C20 8.12 18.89 7 17.5 7zM13 14.73V17h-2v-2.27c-.59-.34-1-.99-1-1.73 0-1.1.9-2 2-2 1.11 0 2 .9 2 2 0 .74-.4 1.39-1 1.73zM15 7H9v-.25c0-1.66 1.35-3 3-3 1.66 0 3 1.34 3 3V7z"></path></g>
     </Svg>
   );
