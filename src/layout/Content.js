@@ -23,7 +23,7 @@ const Content = () => {
         <div className=" flex justify-between items-center p-3 border-b border-gray-extraLight border-none">
           <span className="font-bold text-xl text-gray-900 ">Home</span>
         </div>
-        <div className=" flex justify-evenly border-b ">
+        <div className=" flex justify-evenly border-b">
           <div
             className="w-1/2 flex justify-center hover:bg-gray-200 transform transition-colors duration-250 "
             onClick={() => setFeed("you")}

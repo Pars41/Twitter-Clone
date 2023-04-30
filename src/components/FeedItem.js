@@ -7,7 +7,8 @@ const FeedItem = ({
   image,
   timestamp,
   userName,
-  twitterBlue
+  twitterBlue,
+  like
 }) => {
   return (
     <article className="flex space-x-3 border-b border-gray-extraLight px-4 py-3 cursor-pointer">
@@ -41,13 +42,13 @@ const FeedItem = ({
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-pink-200">
               <LikeIcon className="w-5 h-5 overflow-visible group-hover:text-pink-400"/>
             </div>
-            <span className="group-hover:text-pink-400 text-sm">7</span>
+            <span className="group-hover:text-pink-400 text-sm">{(like? (like>5000 ? `${like.toString().slice(0,-3)}K` :like) : 7)}</span>
           </li>
           <li className="flex items-center space-x-1 text-gray-500 text-sm group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-blue-200">
               <ViewIcon className="w-5 h-5 overflow-visible group-hover:text-primary-base"/>
             </div>
-            <span className="group-hover:text-primary-base text-sm">7</span>
+            <span className="group-hover:text-primary-base text-sm">46.2K</span>
           </li>
           <li className="flex items-center space-x-1 text-gray-500 text-sm group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-blue-200">
