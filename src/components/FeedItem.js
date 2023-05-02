@@ -8,7 +8,10 @@ const FeedItem = ({
   timestamp,
   userName,
   twitterBlue,
-  like
+  like,
+  retweet,
+  view,
+  reply
 }) => {
   return (
     <article className="flex space-x-3 border-b border-gray-extraLight px-4 py-3 cursor-pointer">
@@ -30,25 +33,25 @@ const FeedItem = ({
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-blue-200">
               <ReplyIcon className="w-5 h-5 overflow-visible  group-hover:text-primary-base"/>
             </div>
-            <span className="group-hover:text-primary-base text-sm">7</span>
+            <span className="group-hover:text-primary-base text-sm  ">{(reply? (reply>5000 ? `${reply.toString().slice(0,-3)}K` :reply) : 7)}</span>
           </li>
           <li className="flex items-center space-x-1 text-gray-500 text-sm group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-green-200">
               <RetweetIcon className="w-5 h-5 overflow-visible group-hover:text-green-400"/>
             </div>
-            <span className="group-hover:text-green-400 text-sm">7</span>
+            <span className="group-hover:text-green-400 text-sm ">{(retweet? (retweet>5000 ? `${retweet.toString().slice(0,-3)}K` :retweet) : 7)}</span>
           </li>
           <li className="flex items-center space-x-1 text-gray-500 text-sm group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-pink-200">
               <LikeIcon className="w-5 h-5 overflow-visible group-hover:text-pink-400"/>
             </div>
-            <span className="group-hover:text-pink-400 text-sm">{(like? (like>5000 ? `${like.toString().slice(0,-3)}K` :like) : 7)}</span>
+            <span className="group-hover:text-pink-400 text-sm ">{(like? (like>5000 ? `${like.toString().slice(0,-3)}K` :like) : 7)}</span>
           </li>
           <li className="flex items-center space-x-1 text-gray-500 text-sm group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-blue-200">
               <ViewIcon className="w-5 h-5 overflow-visible group-hover:text-primary-base"/>
             </div>
-            <span className="group-hover:text-primary-base text-sm">46.2K</span>
+            <span className="group-hover:text-primary-base text-sm ">{(view? (view>5000 ? `${view.toString().slice(0,-3)}K` :view) : "46.2K")}</span>
           </li>
           <li className="flex items-center space-x-1 text-gray-500 text-sm group">
             <div className="flex items-center justify-center w-8 h-8 rounded-full group-hover:bg-blue-200">

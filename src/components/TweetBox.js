@@ -14,8 +14,13 @@ const TweetBox = () => {
           userName: "@YsfAyds",     
           content,
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-          image : " https://cdn.pixabay.com/photo/2020/07/08/12/13/monkey-sitting-nature-5383633_960_720.jpg",
-          avatar: "https://www.w3schools.com/howto/img_avatar.png "
+          image : "",
+          avatar: "https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E",
+          like:0,
+          reply:0,
+          retweet:0,
+          view:0
+
           
   
         });
