@@ -6,7 +6,7 @@
 
 Project aims to create a Twitter Clone.
 
-## Expected Outcome
+## Outcome
 
 ![film cenneti](./src/images/twitter%20clone.png)
 
@@ -14,9 +14,9 @@ Project aims to create a Twitter Clone.
 ## Project Skeleton
 
 ```
-006 - Sass Portfolio with React Router (folder)
+
 |
-|----readme.md         # Given to the students (Definition of the project)
+|----readme.md         
 SOLUTION
 ├── public
 │     └── index.html
