@@ -2,6 +2,7 @@ import { useState } from "react";
 import { EmojiIcon, GIFIcon, ImageIcon, LocationIcon, PollIcon, ScheduleIcon } from "../icons/Icons";
 import db from "../Firebase"
 import firebase from "firebase"
+
 const TweetBox = () => {
   const [content, setContent] = useState("")
   
@@ -15,7 +16,7 @@ const TweetBox = () => {
           content,
           timestamp: firebase.firestore.FieldValue.serverTimestamp(),
           image : "",
-          avatar: "https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E",
+          avatar: "https://img.myloview.com/stickers/default-avatar-profile-icon-vector-social-media-user-photo-700-205577532.jpg",
           like:0,
           reply:0,
           retweet:0,

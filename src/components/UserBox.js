@@ -1,5 +1,6 @@
 import React from "react";
 import { LockIcon, TweetMoreIcon } from "../icons/Icons";
+import {profileImage} from "../images/profileImage"
 
 const UserBox = () => {
   return (
@@ -7,7 +8,7 @@ const UserBox = () => {
       <div className="flex space-x-3 w-10/12">
         <div>
            <img
-          src="https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E"
+          src={profileImage}
           alt="profile"
           className="w-11 h-11 rounded-full"
         /> 

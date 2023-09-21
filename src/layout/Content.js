@@ -3,6 +3,8 @@ import Divider from "../components/Divider";
 import TweetBox from "../components/TweetBox";
 import FeedList from "../components/FeedList";
 import db from "../Firebase";
+import {profileImage} from "../images/profileImage"
+
 
 const Content = () => {
   const [tweets, setTweets] = useState([]);
@@ -57,7 +59,7 @@ const Content = () => {
 
       <div className="flex px-4 space-x-4 py-3">
         <img
-          src="https://media.licdn.com/dms/image/D4D03AQFWZVGsh-PfDA/profile-displayphoto-shrink_400_400/0/1681720417433?e=1687392000&v=beta&t=GVhVGIAIuq-aMn_wmSaMsujtE_2Sm0Pil47TSj0zu_E"
+          src={profileImage}
           alt="profile"
           className="w-12 h-12 rounded-full"
         />
