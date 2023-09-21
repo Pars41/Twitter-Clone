@@ -8,7 +8,7 @@ Project aims to create a Twitter Clone.
 
 ## Expected Outcome
 
-![film cenneti](https://user-images.githubusercontent.com/118731253/232813290-a2200a7b-8879-4690-b07f-421a6b8526d6.gif)
+![film cenneti](./src/images/twitter%20clone.png)
 
 
 ## Project Skeleton
